@@ -1,7 +1,7 @@
 apiVersion: batch/v1
 kind: Job
 metadata:
-    name: mild-temper-terraform-rds
+    name: sandy-terraform-rds
     namespace: microservices
 spec:
     template:
@@ -9,7 +9,7 @@ spec:
             namespace: microservices
         spec:
             containers:
-                -   name: mild-temper-terraform-rds
+                -   name: sandy-terraform-rds
                     image: 702037529261.dkr.ecr.us-west-2.amazonaws.com/mild-temper-microservice-terraform
                     env:
                     -   name: AWS_ACCESS_KEY_ID
@@ -23,7 +23,7 @@ spec:
                                 name: aws-terraform-cred
                                 key: AWS_SECRET_ACCESS_KEY
                     -   name: TF_VAR_team_name
-                        value: mild-temper
+                        value: sandy
                     args:
                       - plan
             restartPolicy: Never
