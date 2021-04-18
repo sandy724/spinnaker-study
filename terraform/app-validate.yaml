@@ -10,7 +10,7 @@ spec:
         spec:
             containers:
                 -   name: sandy-terraform-rds
-                    image: 702037529261.dkr.ecr.us-west-2.amazonaws.com/mild-temper-microservice-terraform
+                    image: 702037529261.dkr.ecr.us-west-2.amazonaws.com/sandy-microservice-terraform
                     env:
                     -   name: AWS_ACCESS_KEY_ID
                         valueFrom:
